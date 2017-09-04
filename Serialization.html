@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+	</title>
+	<script >
+		var personal = [{ID:1, Name:"Armando", LastName:"Gomez", Age:25, Country:"Brazil"},
+						{ID:2, Name:"Angel", LastName:"Gomez", Age:28, Country:"Argentina"},
+						{ID:3, Name:"Benito", LastName:"Gomez", Age:34, Country:"Mexico"},
+						{ID:4, Name:"Carlos", LastName:"Gomez", Age:25, Country:"Colombia"}];
+
+	//serialización
+	var jsonString = JSON.stringify(personal);
+	document.write(jsonString);
+	document.write('<br/>');
+	document.write('<br/>');
+	document.write('<br/>');
+
+
+	//Deserialización
+	var objects = JSON.parse(jsonString);
+	for (var s in objects)		
+	{
+		document.write("ID:"+ objects[s].ID + "Name:"+objects[s].Name + "LastName:"+objects[s].LastName+ "Age:"+objects[s].Age +"Country:"+objects[s].Country);
+		document.write('<br/>');
+	}	
+
+	</script>
+</head>
+
+<body>
+	
+</body>
+
+</html> 
